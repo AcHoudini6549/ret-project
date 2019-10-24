@@ -25,6 +25,10 @@ h1 {
   font-size: 30px;
     font-family: monospace;
     color: red;
+  border-color: blue;
+  border: 5px;
+  border: solid;
+  background-color: black; 
 }
 h2 {
   font-size: 12px;
@@ -78,7 +82,7 @@ submit
     if (window.parent && window.parent.parent){
       window.parent.parent.postMessage(["resultsFrame", {
         height: document.body.getBoundingClientRect().height,
-        slug: ""
+        slug: "n7ogark6"
       }], "*")
     }
 
