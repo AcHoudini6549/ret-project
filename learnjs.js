@@ -2,7 +2,7 @@ var myGamePiece;
 
 function startGame() {
     myGameArea.start();
-    myGamePiece = new CompositionEvent(30, 30, "red", 10, 120);
+    myGamePiece = new CompositionEvent (30, 30, "red", 10, 120);
   }
   
   function component(width, height, color, x, y,) {
@@ -23,3 +23,4 @@ function startGame() {
       document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     }
   }
+
