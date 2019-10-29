@@ -1,0 +1,36 @@
+h1 {
+    font-size: 30px;
+      font-family: monospace;
+      color: red;
+    border-color: blue;
+    border: 5px;
+    border: solid;
+    background-color: #00635D; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 525px;
+    padding-left: 525px;
+    margin: 20px;
+  }
+  h2 {
+    font-size: 12px;
+    margin: 10px;
+  }
+  p{
+    font-size: 5px;
+    font-family: monospace;
+    color: blue;
+  }
+  h3 {
+    padding: 15px;
+    color: red;
+  }
+  *{
+      text-align: center;
+  }
+  .col-3{
+      background-color: #79B4A9;
+  }
+  .col-6{
+      background-color: #424242;
+  }
