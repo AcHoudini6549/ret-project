@@ -24,6 +24,8 @@ h1 {
   h3 {
     padding: 15px;
     color: red;
+    text-decoration: underline;
+    text-decoration: bold;
   }
   *{
       text-align: center;
@@ -33,4 +35,8 @@ h1 {
   }
   .col-6{
       background-color: #424242;
+  }
+  #myCanvas {
+    border: 5px solid;
+    box-align: center;
   }
