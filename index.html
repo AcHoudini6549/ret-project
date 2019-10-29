@@ -1,111 +1,44 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title></title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+     <link rel="stylesheet" href="myStyle.css">
 
-
-  <script
-    type="text/javascript"
-    src="/js/lib/dummy.js"
-    
-  ></script>
-
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-
-
-  <style id="compiled-css" type="text/css">
-      
-h1 {
-  font-size: 30px;
-    font-family: monospace;
-    color: red;
-  border-color: blue;
-  border: 5px;
-  border: solid;
-  background-color: black; 
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-right: 525px;
-  padding-left: 525px;
-  margin: 20px;
-}
-h2 {
-  font-size: 12px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 585px;
-  padding-right: 585px;
-  margin: 10px;
-}
-p{
-  font-size: 5px;
-  font-family: monospace;
-  color: blue;
-}
-h3 {
-  padding: 15px;
-}
-  </style>
-
-
-  <!-- TODO: Missing CoffeeScript 2 -->
-
-  <script type="text/javascript">//<![CDATA[
-
-    window.onload=function(){
-      
-
-
-    }
-
-  //]]></script>
-
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
 <body>
     <main>
-<h1>
-2D BEAT 'EM UP
-</h1>
+        <h1>
+        2D BEAT 'EM UP
+        </h1>
+        
+        <h2>
+        created by AcHoudini6549
+        </h2>
+        
+    </main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                About game
+            </div>
+            <div class="col-6">
+                <a style="display: block;" href="#game">Jump to game</a>
+            </div>
+            <div class="col-3">
+                About developer
+            </div>
+        </div>
+    </div>
 
-<h2>
-created by AcHoudini6549
-</h2>
+    <div id="game" style="height: 100vh;">
+        <h3>    
+        2D BEAT 'EM UP!
+        </h3>
+    </div>
 
-<a href="#game">jump to game</a>
-
-<h3>
-<game id="game"> 2D BEAT 'EM UP'</game>
-</h3>
-<p>
-POST YOUR HIGH SCORE HERE!
-</p>
-<form action="submit score">
-<input type="text" placeholder="your high score" required> 
-</placeholder>
-<button type="submit">
-submit
-</button>
-</form>
-</main>
-
-  
-  <script>
-    // tell the embed parent frame the height of the content
-    if (window.parent && window.parent.parent){
-      window.parent.parent.postMessage(["resultsFrame", {
-        height: document.body.getBoundingClientRect().height,
-        slug: "n7ogark6"
-      }], "*")
-    }
-
-    // always overwrite window.name, in case users try to set it manually
-    window.name = "result"
-  </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
 </html>
