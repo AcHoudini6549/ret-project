@@ -1,8 +1,10 @@
-var myGamePiece;
+var redGamePiece, blueGamePiece, yellowGamePiece;
 
 function startGame() {
+  redGamePiece = new component(75, 75, "red", 10, 10);
+  yellowGamePiece = new component(75, 75, "yellow", 50, 60);
+  blueGamePiece = new component(75, 75, "blue", 10, 110);
   myGameArea.start();
-  myGamePiece = new component(140, 10, "blue", 2, 2);
 }
 
 function component(width, height, color, x, y) {
@@ -43,6 +45,12 @@ function component(width, height, color, x, y) {
 
   function updateGameArea() {
     myGameArea.clear();
-    myGamePiece.x += 1;
-    myGamePiece.update();
+    redGamePiece.x += 1;
+    yellowGamePiece.x += 1;
+    yellowGamePiece.y += 1;
+    blueGamePiece.x += 1;
+    blueGamePiece.y -= 1;
+    redGamePiece.update();
+    yellowGamePiece.update();
+    blueGamePiece.update();
   }
