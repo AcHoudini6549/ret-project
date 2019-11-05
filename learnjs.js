@@ -1,15 +1,15 @@
-var redGamePiece, blueGamePiece, yellowGamePiece;
+var myGamePiece;
 
 function startGame() {
-  redGamePiece = new component(75, 75, "red", 10, 10);
-  yellowGamePiece = new component(75, 75, "yellow", 50, 60);
-  blueGamePiece = new component(75, 75, "blue", 10, 110);
+  mtGamePiece = new component(75, 75, "red", 10, 10);
   myGameArea.start();
 }
 
 function component(width, height, color, x, y) {
   this.width = width;
   this.height = height;
+  this.speedX = 0;
+  this.speedY = 0;
   this.x = x;
   this.y = y;
   ctx = myGameArea.context;
@@ -34,6 +34,8 @@ function component(width, height, color, x, y) {
   function component(width, height, color, x, y) {
     this.width = width;
     this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;
     this.x = x;
     this.y = y;
     this.update = function(){
@@ -41,16 +43,30 @@ function component(width, height, color, x, y) {
       ctx.fillStyle = color;
       ctx.fillRect(this.x, this.y, this.width, this.height);
     }
+    this.newPos = function(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+    }
   }
 
   function updateGameArea() {
     myGameArea.clear();
-    redGamePiece.x += 1;
-    yellowGamePiece.x += 1;
-    yellowGamePiece.y += 1;
-    blueGamePiece.x += 1;
-    blueGamePiece.y -= 1;
-    redGamePiece.update();
-    yellowGamePiece.update();
-    blueGamePiece.update();
+    myGamerPiece.newPos();
+    myGamePiece.update();
   }
+
+  function moveup(){
+    myGamePiece.speedY -= 1;
+  }
+  
+  function movedown() {
+    myGamePiece.speedY -= 1;
+  }
+
+function moveleft() {
+  myGamePiece.speedX -= 1;
+}
+
+function moveright() {
+  myGamePiece.speedX -= 1;
+}
