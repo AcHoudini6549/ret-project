@@ -1,7 +1,7 @@
 var myGamePiece;
 
 function startGame() {
-  mtGamePiece = new component(75, 75, "red", 10, 10);
+  myGamePiece = new component(75, 75, "red", 10, 10);
   myGameArea.start();
 }
 
