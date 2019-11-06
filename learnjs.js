@@ -1,4 +1,3 @@
-
 var myGamePiece;
 
 function startGame() {
