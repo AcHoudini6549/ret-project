@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<div id="box"></div>
+<style>
+    #box {
+        background-color: red;
+        height: 50px;
+        left: 150px;
+        position: absolute;
+        top: 10px;
+        width: 50px;
+    }
+</style>
+
+<script>
+    var box = document.getElementById('box'), //the box
+    boxPos = 10, //the box position
+    boxVelocity = 2, //box ms
+    limit = 300 // how far it can travel before direction change
+
+    function draw() {
+        box.style.left = boxPos + 'px';
+    }
+
+    function update() {
+        boxPos += boxVelocity;
+        //switch direction if we go to far
+        if (boxPos >= limit || boxPos <= 0) boxVelocity = -boxVelocity;
+    }
+
+    function mainLoop() {
+        update();
+        draw();
+        requestAnimationFrame(mainLoop);
+    }
+
+    //start the things off
+
+    requestAnimationFrame(mainLoop);
+</script>

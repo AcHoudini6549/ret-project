@@ -3,10 +3,11 @@ var myGamePiece;
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(30, 30, "blue", 20, 20)
+    //adding the game piece
 }
 
 var myGameArea = {
-     canvas : document.createElement("canvas"),
+     canvas : document.getElementById("canvas"),
     start:function() {
        this.canvas.width = 1000;
        this.canvas.height = 500;
@@ -24,7 +25,7 @@ var myGameArea = {
     clear : function() {
         this.context.clearRect(0,0, this.canvas.width, this.canvas.height);
     }
-}
+} // adding control functions and clear function
 
 function component(width, height, color, x, y) {
     this.gamearea = myGameArea;
@@ -43,7 +44,7 @@ function component(width, height, color, x, y) {
         this.x += this.speedX;
         this.y += this.speedY;
     }
-}
+} //adding update function and newPos function
 
 function updateGameArea() {
     myGameArea.clear();
@@ -51,4 +52,6 @@ function updateGameArea() {
     myGamePiece.speedX = 0;
     if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1; }
     if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1; s}
+    myGamePiece.newPos();
+    myGamePiece.update(); 
 }
