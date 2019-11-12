@@ -14,24 +14,38 @@
 <script>
     var box = document.getElementById('box'), //the box
     boxPos = 10, //the box position
-    boxVelocity = 2, //box ms
+    boxVelocity =0.08, //box ms
     limit = 300 // how far it can travel before direction change
+    lastFramesTimeMs = 0;
+    maxFPS = 60;
 
-    function draw() {
-        box.style.left = boxPos + 'px';
+  
     }
 
-    function update() {
-        boxPos += boxVelocity;
+    function update(delta) {
+        boxPos += boxVelocity * delta;
         //switch direction if we go to far
         if (boxPos >= limit || boxPos <= 0) boxVelocity = -boxVelocity;
     }
 
-    function mainLoop() {
-        update();
+    function draw() {
+        box.style.left = boxPos + 'px';
+    
+    function mainLoop(timestamp) {
+        //throttle framerate
+        if (timestamp < lastFrameTimeMs + (1000 / maxFPS)) {
+            requestAnimtaionFrame(mainLoop);
+            return;
+        }
+        delta = timstamp - lastFrameTimeMs;
+        lastFrameTimeMs = timestamp;
+
+        update(delta);
         draw();
         requestAnimationFrame(mainLoop);
     }
+
+    requestAnimationframe(mainLoop);
 
     //start the things off
 
